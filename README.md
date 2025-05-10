@@ -18,16 +18,16 @@ The model framework is shown in the figure：
 
 ### Experimental result diagram.
 
-- ** Depth estimation result diagram.
+- ** Depth estimation result diagram.**
 <img src="./media/1.jpg" alt="深度图" width="600"/>
 
-- ** Real-virtual occlusion effect diagram.
+- ** Real-virtual occlusion effect diagram.**
 <img src="./media/9.jpg" alt="遮挡图" width="600"/>
   
-- ** 3D point cloud reconstruction diagram.
+- ** 3D point cloud reconstruction diagram.**
 <img src="./media/11.jpg" alt="3d图" width="600"/>
   
-- ** AR application scenario diagram.
+- ** AR application scenario diagram.**
 <img src="./media/14.jpg" alt="AR图" width="600"/>
   
 The model demonstrates excellent performance in depth estimation, effectively handling occlusion issues, and shows great potential for applications in augmented reality (AR) scenarios.
