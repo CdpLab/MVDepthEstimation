@@ -51,3 +51,28 @@ This repository contains the implementation of the multi-view depth estimation m
 4. **Download and preprocess datasets** (ScanNetV2, 7Scenes):
 
    Follow instructions in `data/README.md` to set up the datasets.
+
+## Training
+
+By default models and tensorboard event files are saved to `~/tmp/tensorboard/<model_name>`.
+This can be changed with the `--log_dir` flag.
+
+We train with a batch_size of 16 with 16-bit precision on two RTX3090 on the default ScanNetv2 split.
+
+Example command to train with two GPUs:
+
+```shell
+CUDA_VISIBLE_DEVICES=0,1 python train.py --name HERO_MODEL \
+            --log_dir logs \
+            --config_file configs/models/hero_model.yaml \
+            --data_config configs/data/scannet_default_train.yaml \
+            --gpus 2 \
+            --batch_size 16;
+```
+
+The code supports any number of GPUs for training.
+You can specify which GPUs to use with the `CUDA_VISIBLE_DEVICES` environment.
+
+**Different dataset**
+
+You can train on a custom MVS dataset by writing a new dataloader class which inherits from `GenericMVSDataset` at `datasets/generic_mvs_dataset.py`. See the `ScannetDataset` class in `datasets/scannet_dataset.py` or indeed any other class in `datasets` for an example.
