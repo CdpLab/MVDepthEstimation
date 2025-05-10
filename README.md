@@ -170,7 +170,7 @@ CUDA_VISIBLE_DEVICES=0 python pc_fusion.py --name HERO_MODEL \
 
 Change `configs/data/scannet_dense_test.yaml` to `configs/data/scannet_default_test.yaml` to use keyframes only if you don't want to wait too long.
 
-### Acknowledgements
+## Acknowledgements
 
 We would like to express our sincere gratitude to Liu Jia, Wang Bin, Chen Dapeng, Song Hong, Zhang Zengwei, and Huang Nanxuan from Nanjing University of Information Science and Technology for their invaluable support in both the code development and the paper. Their contributions have been crucial in advancing this project, and we greatly appreciate their guidance and collaboration.
 
