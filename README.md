@@ -4,7 +4,8 @@
 
 This repository contains the implementation of the multi-view depth estimation model proposed in the paper *"Multi-view Depth Estimation with Uncertainty Constraints for Virtual-Real Occlusion"* . The model addresses occlusion handling in Augmented Reality (AR) applications by improving depth estimation accuracy, particularly at object contours, using uncertainty constraints.
 The model framework is shown in the figure：
-<img src="./media/2.jpg" alt="模型框架图" width="400"/>
+
+<img src="./media/2.jpg" alt="模型框架图" width="1000"/>
 
 ### Key Features
 
