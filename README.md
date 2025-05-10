@@ -3,9 +3,11 @@
 ## Overview
 
 This repository contains the implementation of the multi-view depth estimation model proposed in the paper *"Multi-view Depth Estimation with Uncertainty Constraints for Virtual-Real Occlusion"* . The model addresses occlusion handling in Augmented Reality (AR) applications by improving depth estimation accuracy, particularly at object contours, using uncertainty constraints.
+
 The model framework is shown in the figure：
 
 <img src="./media/2.jpg" alt="模型框架图" width="1000"/>
+
 
 ### Key Features
 
@@ -14,6 +16,20 @@ The model framework is shown in the figure：
 - **Depth Edge Padding (DEP)**: An optional post-processing module to refine depth map edges for better contour alignment.
 - **Datasets**: Evaluated on ScanNetV2 and 7Scenes, achieving superior performance in depth estimation and virtual-real occlusion tasks.
 
+### Experimental result diagram.
+
+- ** Depth estimation result diagram.
+<img src="./media/1.jpg" alt="深度图" width="6000"/>
+
+- ** Real-virtual occlusion effect diagram.
+
+  
+- ** 3D point cloud reconstruction diagram.
+<img src="./media/11.jpg" alt="3d图" width="6000"/>
+  
+- ** AR application scenario diagram.
+
+  
 
 
 ## Installation
