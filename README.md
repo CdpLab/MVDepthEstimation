@@ -130,4 +130,4 @@ CUDA_VISIBLE_DEVICES=0 python test.py --name HERO_MODEL \
             --batch_size 2;
 ```
 
-This script can also be used to perform a few different auxiliary tasks, 
+This script can also be used to perform a few different auxiliary tasks.
