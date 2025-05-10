@@ -10,3 +10,7 @@ This repository contains the implementation of the multi-view depth estimation m
 - **Attention Spatial Convolution Fusion (ASCF)**: Combines multi-head self-attention and spatial-channel reconstruction convolution to improve feature extraction.
 - **Depth Edge Padding (DEP)**: An optional post-processing module to refine depth map edges for better contour alignment.
 - **Datasets**: Evaluated on ScanNetV2 and 7Scenes, achieving superior performance in depth estimation and virtual-real occlusion tasks.
+
+## Installation
+
+### Prerequisites
