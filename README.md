@@ -76,3 +76,57 @@ This repository contains the implementation of the multi-view depth estimation m
    **Different dataset**
 
    You can train on a custom MVS dataset by writing a new dataloader class which inherits from `GenericMVSDataset` at `datasets/generic_mvs_dataset.py`. See the `ScannetDataset` class in `datasets/scannet_dataset.py` or indeed any other class in `datasets` for an example.
+
+## Testing and Evaluation
+
+You can use `test.py` for inferring and evaluating depth maps and fusing meshes. 
+
+All results will be stored at a base results folder (results_path) at:
+
+    opts.output_base_path/opts.name/opts.dataset/opts.frame_tuple_type/
+
+where opts is the `options` class. For example, when `opts.output_base_path` is `./results`, `opts.name` is `HERO_MODEL`,
+`opts.dataset` is `scannet`, and `opts.frame_tuple_type` is `default`, the output directory will be 
+
+    ./results/HERO_MODEL/scannet/default/
+
+Make sure to set `--opts.output_base_path` to a directory suitable for you to store results.
+
+`--frame_tuple_type` is the type of image tuple used for MVS. A selection should 
+be provided in the `data_config` file you used. 
+
+By default `test.py` will attempt to compute depth scores for each frame and provide both frame averaged and scene averaged metrics. The script will save these scores (per scene and totals) under `results_path/scores`.
+
+We've done our best to ensure that a torch batching bug through the matching 
+encoder is fixed for (<10^-4) accurate testing by disabling image batching 
+through that encoder. Run `--batch_size 4` at most if in doubt, and if 
+you're looking to get as stable as possible numbers and avoid PyTorch 
+gremlins, use `--batch_size 1` for comparison evaluation.
+
+If you want to use this for speed, set `--fast_cost_volume` to True. This will
+enable batching through the matching encoder and will enable an einops 
+optimized feature volume.
+
+
+```bash
+# Example command to just compute scores 
+CUDA_VISIBLE_DEVICES=0 python test.py --name HERO_MODEL \
+            --output_base_path OUTPUT_PATH \
+            --config_file configs/models/hero_model.yaml \
+            --load_weights_from_checkpoint weights/hero_model.ckpt \
+            --data_config configs/data/scannet_default_test.yaml \
+            --num_workers 8 \
+            --batch_size 4;
+
+# If you'd like to get a super fast version use:
+CUDA_VISIBLE_DEVICES=0 python test.py --name HERO_MODEL \
+            --output_base_path OUTPUT_PATH \
+            --config_file configs/models/hero_model.yaml \
+            --load_weights_from_checkpoint weights/hero_model.ckpt \
+            --data_config configs/data/scannet_default_test.yaml \
+            --num_workers 8 \
+            --fast_cost_volume \
+            --batch_size 2;
+```
+
+This script can also be used to perform a few different auxiliary tasks, 
