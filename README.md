@@ -1,4 +1,11 @@
-# Multi-view Depth Estimation with Uncertainty Constraints for Virtual-Real Occlusion                                                                                                                              
+#  <p align="center">Multi-view Depth Estimation with Uncertainty Constraints for Virtual-Real Occlusion</p>
+
+<p align="center">Jia Liu, Bin Wang, Dapeng Chen*, Hong Song, Zengwei Zhang and Nanxuan Huang</p>
+<p align="center">Nanjing University of Information Science and Technology</p>
+
+## <p align="center">ABSTRACT</p>
+In the context of the rapid development of Augmented Reality (AR) technology, addressing the challenge of occlusion between virtual objects and real scenes becomes increasingly important. This paper focuses on depth-based occlusion handling methods for AR applications and proposes a multi-view depth estimation model. To improve the accuracy of object depth contour estimation, a Bayesian Convolutional Uncertainty Estimation module is incorporated into the model, and a new uncertainty loss function is introduced to constrain depth contours. Additionally, an Attention Spatial Convolution Fusion module is integrated into the feature encoder to enhance feature representation capability. Finally, an optional post-processing method, the Depth Edge Padding module, is provided. This module aims to optimize the performance of the depth map output by the model at object edges. The model demonstrates superior depth estimation performance on the ScanNet and 7Scenes datasets compared to existing multi-view depth estimation research, particularly exhibiting higher accuracy in object contour regions. Moreover, the model also exhibits more realistic effects in occlusion handling between virtual and real scenes.
+
 
 ## Overview
 
