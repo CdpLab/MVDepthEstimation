@@ -19,13 +19,13 @@ The model framework is shown in the figure：
 ### Experimental result diagram.
 
 - ** Depth estimation result diagram.
-<img src="./media/1.jpg" alt="深度图" width="6000"/>
+<img src="./media/1.jpg" alt="深度图" width="600"/>
 
 - ** Real-virtual occlusion effect diagram.
 
   
 - ** 3D point cloud reconstruction diagram.
-<img src="./media/11.jpg" alt="3d图" width="6000"/>
+<img src="./media/11.jpg" alt="3d图" width="600"/>
   
 - ** AR application scenario diagram.
 
