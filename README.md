@@ -88,7 +88,7 @@ The model demonstrates excellent performance in depth estimation, effectively ha
 4. **Download and preprocess datasets** (ScanNetV2, 7Scenes):
 
    Follow instructions in `data/README.md` to set up the datasets.
-   Please follow the instructions [here](https://github.com/ScanNet/ScanNet) to download the dataset. This dataset is quite big (>2TB), so make sure you have enough space, especially for extracting files.
+   Please follow the instructions [here](https://github.com/ScanNet/ScanNet) to download the ScanNet dataset. This dataset is quite big (>2TB), so make sure you have enough space, especially for extracting files. Follow the instructions [here](https://www.microsoft.com/en-us/research/project/rgb-d-dataset-7-scenes/?msockid=0faa059eb12a673618d31147b0f86613) to download the 7Scenes dataset.
 
 ## Training
 
