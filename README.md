@@ -35,9 +35,16 @@ The evaluation metrics for the depth estimation performance of our model on the 
 | Methods | Abs Diff | ABS Rel | Sq Rel | \(\delta < 1.05\) | \(\delta < 1.25\) |
 |----------|----------|----------|----------|----------|----------|
 | Baseline | 0.0941 | 0.0457 | 0.0139 | 71.95 | 97.84 |
-| Ours(without Dep) | 0.0864 | 0.0422 | 0.0115 | 73.83 | 98.14 |
+| Ours(without DEP) | 0.0864 | 0.0422 | 0.0115 | 73.83 | 98.14 |
 | Ours | 0.0843 | 0.0395 | 0.0103 | 74.79 | 98.21 |
 
+The evaluation metrics for the depth estimation performance of our model on the 7Scenes dataset are shown in the table below.
+
+| Methods | Abs Diff | ABS Rel | Sq Rel | \(\delta < 1.05\) | \(\delta < 1.25\) |
+|----------|----------|----------|----------|----------|----------|
+| Baseline | 0.1045 | 0.0617 | 0.0175 | 57.30 | 97.02 |
+| Ours(without DEP) | 0.1104 | 0.0599 | 0.0170 | 60.45 | 96.62 |
+| Ours | 0.1095 | 0.0577 | 0.0161 | 61.03 | 96.94 |
   
 The model demonstrates excellent performance in depth estimation, effectively handling occlusion issues, and shows great potential for applications in augmented reality (AR) scenarios.
 
