@@ -29,6 +29,15 @@ The model framework is shown in the figure：
   
 - ** AR application scenario diagram.**
 <img src="./media/14.jpg" alt="AR图" width="600"/>
+
+The evaluation metrics for the depth estimation performance of our model on the ScanNet dataset are shown in the table below.
+
+| Methods | Abs Diff | ABS Rel | Sq Rel | \(\delta < 1.05\) | \(\delta < 1.25\) |
+|----------|----------|----------|----------|----------|----------|
+| Baseline | 0.0941 | 0.0457 | 0.0139 | 71.95 | 97.84 |
+| Ours(without Dep) | 0.0864 | 0.0422 | 0.0115 | 73.83 | 98.14 |
+| Ours | 0.0843 | 0.0395 | 0.0103 | 74.79 | 98.21 |
+
   
 The model demonstrates excellent performance in depth estimation, effectively handling occlusion issues, and shows great potential for applications in augmented reality (AR) scenarios.
 
