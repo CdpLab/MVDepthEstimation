@@ -28,7 +28,7 @@ The model framework is shown in the figure：
 <img src="./media/11.jpg" alt="3d图" width="600"/>
   
 - ** AR application scenario diagram.
-
+<img src="./media/14.jpg" alt="3d图" width="600"/>
   
 
 
