@@ -131,3 +131,20 @@ CUDA_VISIBLE_DEVICES=0 python test.py --name HERO_MODEL \
 ```
 
 This script can also be used to perform a few different auxiliary tasks.
+
+## Point Cloud Fusion
+
+We also allow point cloud fusion of depth maps using the fuser from 3DVNet's [repo](https://github.com/alexrich021/3dvnet/blob/main/mv3d/eval/pointcloudfusion_custom.py). 
+
+```bash
+# Example command to fuse depths into point clouds.
+CUDA_VISIBLE_DEVICES=0 python pc_fusion.py --name HERO_MODEL \
+            --output_base_path OUTPUT_PATH \
+            --config_file configs/models/hero_model.yaml \
+            --load_weights_from_checkpoint weights/hero_model.ckpt \
+            --data_config configs/data/scannet_dense_test.yaml \
+            --num_workers 8 \
+            --batch_size 4;
+```
+
+Change `configs/data/scannet_dense_test.yaml` to `configs/data/scannet_default_test.yaml` to use keyframes only if you don't want to wait too long.
